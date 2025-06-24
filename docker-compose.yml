@@ -1,0 +1,17 @@
+version: "3.8"
+
+services:
+  fastapi-ml-app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: fastapi-ml-container
+    ports:
+      - "8000:8000"
+    networks:
+      - ml_network
+    restart: unless-stopped
+
+networks:
+  ml_network:
+    driver: bridge
