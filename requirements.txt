@@ -7,3 +7,5 @@ pydantic
 mlflow
 pandas
 matplotlib
+scikit-learn
+pytest
